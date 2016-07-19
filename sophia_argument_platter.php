@@ -11,6 +11,31 @@ protected $allrest;
 
 protected $init_flag = false;
 
+protected function extracoy ( $rayo, $valo )
+{
+  if ( !$this->init_flag ) { return false; }
+  if ( !is_array($rayo) ) { return false; }
+  if ( !array_key_exits($valo,$rayo) ) { return false; }
+  return $rayo[$valo];
+}
+
+public function arg ( $valo )
+{
+  return $this->extracoy($this->allargs,$valo);
+}
+
+public function obj ( $valo )
+{
+  return $this->extracoy($this->allobjs,$valo);
+}
+
+public function prm ( $numro, $keyos )
+{
+  $ono = $this->extracoy($this->allrays,$numro);
+  $tuo = $this->extracoy($ono,$keyos);
+  return $tuo;
+}
+
 public function set01 ( $siz, $ray ) {
   if ( $this->init_flag ) { return false; }
   if ( $siz < 1 ) { return false; }
