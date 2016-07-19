@@ -36,6 +36,11 @@ public function prm ( $numro, $keyos )
   return $tuo;
 }
 
+public function ftr ( )
+{
+  return $this->headarg;
+}
+
 public function set01 ( $siz, $ray ) {
   if ( $this->init_flag ) { return false; }
   if ( $siz < 1 ) { return false; }
@@ -66,7 +71,7 @@ public function set01 ( $siz, $ray ) {
   $this->allrays = $allrays;
   $this->allobjs = $allobjs;
   $this->allrest = $allrest;
-  return true;
+  return $true;
 }
 
 } ?>

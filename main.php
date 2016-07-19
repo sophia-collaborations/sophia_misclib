@@ -1,5 +1,5 @@
 <?php
 
-require_once(realpath(__DIR__ . '/main-alt-file.php'));
+require_once(realpath(__DIR__ . '/sophia_dynamic_obj.php'));
 
 ?>
